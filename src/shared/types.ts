@@ -5,14 +5,13 @@ export enum SelectedPage {
   ContactUs = "contactus",
 }
 
-export interface BenefitType {
-  icon: JSX.Element;
+export interface SkillsType {
   title: string;
-  description: string;
+  type?: string;
 }
 
 export interface ClassType {
   name: string;
-  description?: string;
+  description?: string | React.ReactNode;
   image: string;
 }

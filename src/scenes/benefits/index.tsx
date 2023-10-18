@@ -1,6 +1,6 @@
 import ActionButton from "@/shared/ActionButton";
 import HText from "@/shared/HText";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import { SkillsType, SelectedPage } from "@/shared/types";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -9,28 +9,10 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Benefit from "./Benefits";
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
-
-const benefit: Array<BenefitType> = [
-  {
-    icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam suscipit architecto commodi quas, neque delectus? Sed consequatur incidunt aliquam iure laborum cupiditate asperiores, tempora eos nostrum quia minus et! Quo.",
-  },
-  {
-    icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam suscipit architecto commodi quas, neque delectus? Sed consequatur incidunt aliquam iure laborum cupiditate asperiores, tempora eos nostrum quia minus et! Quo.",
-  },
-  {
-    icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Expert and Pro trainers",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam suscipit architecto commodi quas, neque delectus? Sed consequatur incidunt aliquam iure laborum cupiditate asperiores, tempora eos nostrum quia minus et! Quo.",
-  },
-];
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.jpg";
+import Programming from "@/assets/progr.png";
+import { skills } from "./data";
+import Skills from "./Skills";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -38,7 +20,7 @@ type Props = {
 
 function Benefits({ setSelectedPage }: Props) {
   return (
-    <section id="benefit" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
@@ -55,30 +37,45 @@ function Benefits({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST GYM</HText>
+          <HText>Навыки</HText>
           <p className="my-5 text-sm">
-            We provide world class fitness equipment, trainers ans classes to
-            get you to your ultimate fitness goals with ease. We provider true
-            care into each end every member.
+            Мои навыки, которыми я обладаю, и технологии с которыми я знакома и
+            умею работать
           </p>
         </motion.div>
         {/* Benefits */}
-        <div className="mt-5 items-center justify-between gap-8 md:flex">
-          {benefit.map((benefit: BenefitType) => (
-            <Benefit
-              key={benefit.title}
-              icon={benefit.icon}
-              title={benefit.title}
-              description={benefit.description}
-              setSelectedPage={setSelectedPage}
+        <div className="md:flex md:justify-around">
+          <div className="mt-5 items-center justify-center gap-5 md:flex md:flex-col md:flex-wrap md:items-start">
+            <Skills
+              typeOfSkillsToDisplay="Языки программирования"
+              typeOfSkills="language"
             />
-          ))}
+
+            <Skills
+              typeOfSkillsToDisplay="Framework"
+              typeOfSkills="framework"
+            />
+            <Skills typeOfSkillsToDisplay="Базы Данных" typeOfSkills="bd" />
+            <Skills typeOfSkillsToDisplay="Библиотеки" typeOfSkills="library" />
+            <Skills
+              typeOfSkillsToDisplay="Тестирование"
+              typeOfSkills="testing"
+            />
+            <Skills typeOfSkillsToDisplay="Прочее" typeOfSkills="other" />
+          </div>
+          <div className="md:flex md:items-center">
+            <img
+              src={Programming}
+              alt="My skills"
+              className="hidden md:ml-40 md:block"
+            />
+          </div>
         </div>
         {/* Graphics and description*/}
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
           {/* graphics */}
           <img
-            className="mx-auto"
+            className="mx-auto mb-16"
             src={BenefitsPageGraphic}
             alt="benefits-page-graphic"
           />
@@ -99,15 +96,16 @@ function Benefits({ setSelectedPage }: Props) {
                   }}
                 >
                   <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
-                    <span className="text-primary-500">FIT</span>
+                    ЧТО Я МОГУ СДЕЛАТЬ ДЛЯ ВАШЕГО ПРОЕКТА, КАК{" "}
+                    <span className="text-secondary-500">
+                      FRONTEND DEVELOPER
+                    </span>
                   </HText>
                 </motion.div>
               </div>
             </div>
             {/* description */}
             <motion.div
-              className=""
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -118,20 +116,31 @@ function Benefits({ setSelectedPage }: Props) {
               }}
             >
               <p className="my-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Разработать приложение (SPA,SSR) на React, JavaScript,
+                TypeScript;
               </p>
               <p className="mb-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Necessitatibus non impedit consequuntur laboriosam aliquam! Et
-                laborum ad numquam totam. Suscipit adipisci eaque mollitia odit
-                blanditiis officiis cupiditate vel consequuntur fugit.
+                Осуществить кросс-браузерную, адаптивную верстку
+                пользовательских интерфейсов, компонентов/элементов дизайна
+                (CSS, SASS, CSS-in-JS)
+              </p>
+              <p className="mb-5">
+                Реализовать логику работы функционала всех пользовательских
+                интерфейсов (Redux, Redux Toolkit);
+              </p>
+              <p className="mb-5">
+                Интегрировать клиентскую часть с серверной через Rest API;
+              </p>
+              <p className="mb-5">Покрыть код e2e, Unit-тестами</p>
+              <p className="mb-5">
+                Рефакторить, оптимизировать ранее написанный код.
               </p>
             </motion.div>
             {/* button */}
             <div className="relative mt-16">
-              <div className="before-bottom-20 before: z-[-1] before:absolute before:right-40 before:content-sparkles">
+              <div className="before-bottom-20 before:absolute before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>
-                  Join Now
+                  Связаться со мной сейчас
                 </ActionButton>
               </div>
             </div>

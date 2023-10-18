@@ -1,50 +1,9 @@
 import { SelectedPage, ClassType } from "@/shared/types";
-import image1 from "@/assets/image1.png";
-import image2 from "@/assets/image2.png";
-import image3 from "@/assets/image3.png";
-import image4 from "@/assets/image4.png";
-import image5 from "@/assets/image5.png";
-import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Class from "./Class";
-
-const classes: Array<ClassType> = [
-  {
-    name: "Weight Training Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officia.",
-    image: image1,
-  },
-  {
-    name: "Yoga Classes",
-    image: image2,
-  },
-  {
-    name: "Ab Core Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officia.",
-    image: image3,
-  },
-  {
-    name: "Adventure Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officia.",
-    image: image4,
-  },
-  {
-    name: "Fitness Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officia.",
-    image: image5,
-  },
-  {
-    name: "Training Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officia.",
-    image: image6,
-  },
-];
+import { classes } from "./data";
+import { CodeBracketIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -52,7 +11,7 @@ type Props = {
 
 function Classes({ setSelectedPage }: Props) {
   return (
-    <section className="w-full bg-primary-100 py-40" id="ourclasses">
+    <section className="w-full bg-neutral-50 py-40" id="ourclasses">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
@@ -69,17 +28,20 @@ function Classes({ setSelectedPage }: Props) {
           }}
         >
           <div className="md:w-3/5">
-            <HText> OUR CLASSES</HText>
+            <HText>ПОРТФОЛИО</HText>
             <p className="py-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              quis repudiandae excepturi laboriosam. Qui ut in error vitae
-              nobis, impedit eos sequi veniam perspiciatis nemo officia beatae,
-              tempora expedita quasi.
+              Это проекты, которые я выполняла сама, чтобы научиться чему-то
+              новому или просто реализовать какую-то свою идею. Некоторые из них
+              еще находятся в процессе разработке
+            </p>
+            <p className="py-5">
+              Чтобы узнать больше про проект, можно нажать на него, прочитать
+              краткое описание и перейти на гит или на деплой данного проекта
             </p>
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+          <ul className="flex w-[2100px] justify-between whitespace-nowrap">
             {classes.map((item, index) => (
               <Class
                 key={`${item.name}-${index}`}

@@ -2,7 +2,7 @@ import Navbar from "@/scenes/navbar";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
-import Benefits from "@/scenes/benefits";
+import Benefits from "./scenes/benefits";
 import Classes from "./scenes/ourclasses";
 import ContactUs from "./scenes/contactUs";
 import Footer from "./scenes/footer";

@@ -1,32 +1,44 @@
-import Logo from "@/assets/Logo.png";
-
 function footer() {
   return (
-    <footer className="bg-primary-100 py-16">
+    <footer className="bg-gray-50 py-16">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
-          <img src={Logo} alt="logo" />
           <p className="my-5">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consectetur consequatur temporibus facere quos laboriosam dolorum
-            recusandae quibusdam, officiis nostrum provident mollitia minus.
-            Repellat aut vel laborum quia officia veritatis pariatur?
+            Если вы случайно обнаружили какие-либо баги в данном лендинге, буду
+            благодарна, если вы сообщите о них, чтобы я имела возможность их
+            исправить
           </p>
-          <p>Evogym All Rights Reserved</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
           <h4 className="font-bold">Links</h4>
-          <p className="my-5">Lorem, ipsum dolor.</p>
-          <p className="my-5">Lorem, ipsum dolor.</p>
-          <p className="my-5">Lorem, ipsum dolor.</p>
+          <p className="my-5">
+            <a href="https://github.com/LinaKv" target="_blank">
+              GitHub
+            </a>
+          </p>
+          <p className="my-5">
+            <a
+              href="https://www.linkedin.com/in/pauline-kvitka/"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+          </p>
+          <p className="my-5">
+            <a href="https://t.me/polina_obw" target="_blank">
+              Telegram
+            </a>
+          </p>
         </div>
 
         <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Contact Us</h4>
+          <h4 className="font-bold">Связаться со мной</h4>
           <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
+            <a href="https://t.me/polina_obw" target="_blank">
+              Telegram
+            </a>
           </p>
-          <p>111-111-111</p>
+          <p>kvitka.p@yandex.ru</p>
         </div>
       </div>
     </footer>
