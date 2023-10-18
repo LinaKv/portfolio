@@ -69,7 +69,7 @@ function ContactUs({ setSelectedPage }: Props) {
           >
             <form
               method="POST"
-              action="http://formsubmit.co/kvitka.p@yandex.ru"
+              action="https://formsubmit.co/kvitka.p@yandex.ru"
               target="_blank"
               onSubmit={onSubmit}
             >
