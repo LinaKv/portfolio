@@ -1,5 +1,5 @@
 import React from "react";
-import { skills } from "./data";
+import { skills } from "../../shared/data/skillsData";
 import { SkillsType } from "@/shared/types";
 import Benefit from "./Benefits";
 

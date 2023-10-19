@@ -1,17 +1,9 @@
 import ActionButton from "@/shared/ActionButton";
 import HText from "@/shared/HText";
-import { SkillsType, SelectedPage } from "@/shared/types";
-import {
-  HomeModernIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  SparklesIcon,
-} from "@heroicons/react/24/solid";
+import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import Benefit from "./Benefits";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.jpg";
 import Programming from "@/assets/progr.png";
-import { skills } from "./data";
 import Skills from "./Skills";
 
 type Props = {
@@ -43,6 +35,7 @@ function Benefits({ setSelectedPage }: Props) {
             умею работать
           </p>
         </motion.div>
+
         {/* Benefits */}
         <div className="md:flex md:justify-around">
           <div className="mt-5 items-center justify-center gap-5 md:flex md:flex-col md:flex-wrap md:items-start">
@@ -71,6 +64,7 @@ function Benefits({ setSelectedPage }: Props) {
             />
           </div>
         </div>
+
         {/* Graphics and description*/}
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
           {/* graphics */}
@@ -111,7 +105,7 @@ function Benefits({ setSelectedPage }: Props) {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               variants={{
-                hidden: { opacity: 0, x: 50 },
+                hidden: { opacity: 0, x: 0 },
                 visible: { opacity: 1, x: 0 },
               }}
             >

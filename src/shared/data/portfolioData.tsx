@@ -4,7 +4,7 @@ import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
 import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
-import Class from "./Class";
+import Class from "../../scenes/ourclasses/Class";
 
 export const classes: Array<ClassType> = [
   {

@@ -1,9 +1,8 @@
-import { SelectedPage, ClassType } from "@/shared/types";
+import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Class from "./Class";
-import { classes } from "./data";
-import Circles from "../../assets/Circles.png";
+import { classes } from "../../shared/data/portfolioData";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

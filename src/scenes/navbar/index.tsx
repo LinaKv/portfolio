@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -83,7 +82,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             </button>
           </div>
           {/* menu */}
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div
+            className="ml-[33%] flex flex-col gap-10 text-2xl"
+            onClick={() => setIsMenuToggled(!isMenuToggled)}
+          >
             <Link
               name="Домой"
               page="Home"
