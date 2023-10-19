@@ -115,7 +115,29 @@ function Benefits({ setSelectedPage }: Props) {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="my-5">
+              <ul className="ml-5 list-disc">
+                <li className="my-5">
+                  Разработать приложение (SPA,SSR) на React, JavaScript,
+                  TypeScript;
+                </li>
+                <li className="mb-5">
+                  Осуществить кросс-браузерную, адаптивную верстку
+                  пользовательских интерфейсов, компонентов/элементов дизайна
+                  (CSS, SASS, CSS-in-JS)
+                </li>
+                <li className="mb-5">
+                  Реализовать логику работы функционала всех пользовательских
+                  интерфейсов (Redux, Redux Toolkit);
+                </li>
+                <li className="mb-5">
+                  Интегрировать клиентскую часть с серверной через Rest API;
+                </li>
+                <li className="mb-5">Покрыть код e2e, Unit-тестами</li>
+                <li className="mb-5">
+                  Рефакторить, оптимизировать ранее написанный код.
+                </li>
+              </ul>
+              {/* <p className="my-5">
                 Разработать приложение (SPA,SSR) на React, JavaScript,
                 TypeScript;
               </p>
@@ -134,7 +156,7 @@ function Benefits({ setSelectedPage }: Props) {
               <p className="mb-5">Покрыть код e2e, Unit-тестами</p>
               <p className="mb-5">
                 Рефакторить, оптимизировать ранее написанный код.
-              </p>
+              </p> */}
             </motion.div>
             {/* button */}
             <div className="relative mt-16">

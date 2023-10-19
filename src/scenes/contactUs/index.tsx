@@ -53,27 +53,27 @@ function ContactUs({ setSelectedPage }: Props) {
             Напишите мне в телеграм, чтобы связаться со мной как можно быстрее
           </p>
         </motion.div>
+        <motion.div
+          className="mt-10 flex items-center justify-center md:mt-0 md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <a
+            href="https://t.me/polina_obw"
+            target="_blank"
+            className="rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+          >
+            TELEGRAM
+          </a>
+        </motion.div>
         {/* FORM and IMG */}
         <div className="mt-10 justify-between gap-8 md:flex">
-          <motion.div
-            className="mt-10 flex items-center justify-center md:mt-0"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <a
-              href="https://t.me/polina_obw"
-              target="_blank"
-              className="rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
-            >
-              TELEGRAM
-            </a>
-          </motion.div>
           <motion.div
             className="mt-10 basis-3/5 md:mt-0"
             initial="hidden"
@@ -85,9 +85,7 @@ function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <p className="my-5">
-              Или напишите мне на почту, используя форму ниже
-            </p>
+            <p>Или напишите мне на почту, используя форму ниже</p>
             <form
               method="POST"
               action="https://formsubmit.co/kvitka.p@yandex.ru"
@@ -172,7 +170,7 @@ function ContactUs({ setSelectedPage }: Props) {
           >
             <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
-                className="w-full md:ml-5"
+                className="w-full md:ml-10 md:mt-[-120px]"
                 src={ContactUsPageGraphic}
                 alt="contact us"
               />
