@@ -3,6 +3,7 @@ export enum SelectedPage {
   Benefits = "benefits",
   OurClasses = "ourclasses",
   ContactUs = "contactus",
+  Experience = "experience",
 }
 
 export interface SkillsType {
@@ -14,4 +15,11 @@ export interface ClassType {
   name: string;
   description?: string | React.ReactNode;
   image: string;
+}
+
+export interface workingPlace {
+  name: string;
+  dateStart: string;
+  dateEnd: string | null;
+  responsibilities: string[];
 }

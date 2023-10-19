@@ -1,14 +1,14 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
-import Class from "./Class";
+import Class from "./Portfolio";
 import { classes } from "../../shared/data/portfolioData";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-function Classes({ setSelectedPage }: Props) {
+function Portfolio({ setSelectedPage }: Props) {
   return (
     <section className="w-full bg-neutral-50 py-16" id="ourclasses">
       <motion.div
@@ -53,11 +53,11 @@ function Classes({ setSelectedPage }: Props) {
         </div>
 
         <div className="relative">
-          <div className="before-bottom-20 before:absolute before:top-[-15px] before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
+          <div className="before-bottom-20 before:absolute before:top-[-40px] before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
         </div>
       </motion.div>
     </section>
   );
 }
 
-export default Classes;
+export default Portfolio;
