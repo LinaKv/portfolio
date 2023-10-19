@@ -11,7 +11,7 @@ type Props = {
 
 function Classes({ setSelectedPage }: Props) {
   return (
-    <section className="w-full bg-neutral-50 py-20" id="ourclasses">
+    <section className="w-full bg-neutral-50 py-16" id="ourclasses">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
@@ -54,7 +54,7 @@ function Classes({ setSelectedPage }: Props) {
         </div>
 
         <div className="relative">
-          <div className="before-bottom-20 before:absolute  before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
+          <div className="before-bottom-20 before:absolute before:top-[-15px] before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
         </div>
       </motion.div>
     </section>
