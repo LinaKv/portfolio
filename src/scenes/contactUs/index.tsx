@@ -50,12 +50,30 @@ function ContactUs({ setSelectedPage }: Props) {
             прямо сейчас
           </HText>
           <p className="my-5">
-            Напишите мне письмо прямо здесь и я получу его на свою почту
-            незамедлительно. Или можете написать мне в телеграм @polina_obw
+            Напишите мне в телеграм, чтобы связаться со мной как можно быстрее
           </p>
         </motion.div>
         {/* FORM and IMG */}
         <div className="mt-10 justify-between gap-8 md:flex">
+          <motion.div
+            className="mt-10 flex items-center justify-center md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <a
+              href="https://t.me/polina_obw"
+              target="_blank"
+              className="rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+            >
+              TELEGRAM
+            </a>
+          </motion.div>
           <motion.div
             className="mt-10 basis-3/5 md:mt-0"
             initial="hidden"
@@ -67,6 +85,9 @@ function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
+            <p className="my-5">
+              Или напишите мне на почту, используя форму ниже
+            </p>
             <form
               method="POST"
               action="https://formsubmit.co/kvitka.p@yandex.ru"

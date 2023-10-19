@@ -138,7 +138,7 @@ function Benefits({ setSelectedPage }: Props) {
             </motion.div>
             {/* button */}
             <div className="relative mt-16">
-              <div className="before-bottom-20 before:absolute before:right-40 before:z-[-1] before:content-sparkles">
+              <div className="before-bottom-20 before:absolute before:right-40  before:top-10 before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Связаться со мной сейчас
                 </ActionButton>

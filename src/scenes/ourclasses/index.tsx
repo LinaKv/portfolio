@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Class from "./Class";
 import { classes } from "./data";
-import { CodeBracketIcon } from "@heroicons/react/24/solid";
+import Circles from "../../assets/Circles.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -51,6 +51,10 @@ function Classes({ setSelectedPage }: Props) {
               />
             ))}
           </ul>
+        </div>
+
+        <div className="relative">
+          <div className="before-bottom-20 before:absolute  before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
         </div>
       </motion.div>
     </section>
