@@ -10,7 +10,7 @@ type Props = {
 
 function Portfolio({ setSelectedPage }: Props) {
   return (
-    <section className="w-full bg-neutral-50 py-16" id="ourclasses">
+    <section className="w-full bg-neutral-50 pt-16" id="ourclasses">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
@@ -52,8 +52,8 @@ function Portfolio({ setSelectedPage }: Props) {
           </ul>
         </div>
 
-        <div className="relative">
-          <div className="before-bottom-20 before:absolute before:top-[-40px] before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
+        <div className="relative z-0">
+          <div className="before-bottom-20  before:absolute before:top-[-40px] before:left-60 before:h-[100px] before:w-[100px] before:content-circles md:before:left-3/4 md:before:top-[20px]" />
         </div>
       </motion.div>
     </section>

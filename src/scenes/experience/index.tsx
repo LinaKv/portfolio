@@ -29,7 +29,7 @@ function Experience({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="md:w-3/5">
+          <div className=" md:w-3/5">
             <HText>ОПЫТ РАБОТЫ</HText>
             <p className="py-5">
               Мой общий стаж составляет{" "}
