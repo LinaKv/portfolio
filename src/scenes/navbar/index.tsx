@@ -95,7 +95,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
           {/* menu */}
           <div
-            className="flex flex-col items-center gap-10 text-2xl"
+            className="ml-5 flex flex-col items-start gap-10 text-2xl"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <Link
