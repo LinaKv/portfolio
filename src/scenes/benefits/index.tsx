@@ -12,7 +12,7 @@ type Props = {
 
 function Benefits({ setSelectedPage }: Props) {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 pt-[88px] pb-20">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
@@ -131,26 +131,6 @@ function Benefits({ setSelectedPage }: Props) {
                   Рефакторить, оптимизировать ранее написанный код.
                 </li>
               </ul>
-              {/* <p className="my-5">
-                Разработать приложение (SPA,SSR) на React, JavaScript,
-                TypeScript;
-              </p>
-              <p className="mb-5">
-                Осуществить кросс-браузерную, адаптивную верстку
-                пользовательских интерфейсов, компонентов/элементов дизайна
-                (CSS, SASS, CSS-in-JS)
-              </p>
-              <p className="mb-5">
-                Реализовать логику работы функционала всех пользовательских
-                интерфейсов (Redux, Redux Toolkit);
-              </p>
-              <p className="mb-5">
-                Интегрировать клиентскую часть с серверной через Rest API;
-              </p>
-              <p className="mb-5">Покрыть код e2e, Unit-тестами</p>
-              <p className="mb-5">
-                Рефакторить, оптимизировать ранее написанный код.
-              </p> */}
             </motion.div>
             {/* button */}
             <div className="relative mt-16">

@@ -13,7 +13,7 @@ function Experience({ setSelectedPage }: Props) {
   const experience = howManyWorkingExp();
 
   return (
-    <section className="w-full bg-neutral-50 py-16" id="experience">
+    <section className="w-full bg-neutral-50 pt-[88px] pb-5" id="experience">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.Experience)}

@@ -89,7 +89,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
           {/* menu */}
           <div
-            className="ml-[33%] flex flex-col gap-10 text-2xl"
+            className="flex flex-col items-center gap-10 text-2xl"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <Link
@@ -99,19 +99,19 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              name="Мои скиллы"
+              name="Скиллы"
               page="Benefits"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              name="Мои проекты"
+              name="Портфолио"
               page="Our Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              name="Мой опыт работы"
+              name="Опыт работы"
               page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
