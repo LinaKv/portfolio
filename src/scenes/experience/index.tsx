@@ -47,7 +47,7 @@ function Experience({ setSelectedPage }: Props) {
         </motion.div>
       </motion.div>
       <div className="relative">
-        <div className="before:absolute before:top-0 before:right-0 before:z-[1] before:content-abstractwaves"></div>
+        <div className=" before:absolute before:top-0 before:right-0 before:z-[1] before:content-abstractwaves" />
       </div>
     </section>
   );
