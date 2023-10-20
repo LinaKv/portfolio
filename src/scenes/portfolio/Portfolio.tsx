@@ -12,7 +12,7 @@ function Project({ name, description, image }: Props) {
     <li className="relative mx-1 inline-block h-[350px] w-[380px] md:mx-5">
       <div className={overlayStyles}>
         <p className="text-2xl">{name}</p>
-        <p className="mt-5">{description}</p>
+        <div className="mt-5">{description}</div>
       </div>
       <img src={image} alt="image1" />
     </li>

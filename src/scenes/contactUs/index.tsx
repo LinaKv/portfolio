@@ -87,7 +87,7 @@ function ContactUs({ setSelectedPage }: Props) {
             <p>Или напишите мне на почту, используя форму ниже</p>
             <form
               method="POST"
-              action="https://formsubmit.co/kvitka.p@yandex.ru"
+              action="https://formsubmit.co/be41cb1352dd8731a4ec0d82d9c3a917"
               target="_blank"
               onSubmit={onSubmit}
             >

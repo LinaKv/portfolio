@@ -38,7 +38,11 @@ function footer() {
               Telegram
             </a>
           </p>
-          <p>kvitka.p@yandex.ru</p>
+          <p>
+            <span>kvitka.p</span>
+            <span className="before-at-sign" />
+            <span className="domain">yandex.ru</span>
+          </p>
         </div>
       </div>
     </footer>

@@ -31,6 +31,10 @@ export const skills: Array<SkillsType> = [
     type: "other",
   },
   {
+    title: "react-transition-group",
+    type: "library",
+  },
+  {
     title: "SASS",
     type: "language",
   },

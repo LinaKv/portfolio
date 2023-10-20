@@ -9,7 +9,7 @@ function WorkPlaces({}: Props) {
   return (
     <div className="mt-[-30px]">
       {workingPlaces.map((workingPlace: workingPlace) => (
-        <>
+        <div key={workingPlace.name}>
           <div className="mt-10">
             <p className="text-xl font-bold">{workingPlace.name}</p>
             <p className="text-s text-primary-100">
@@ -27,12 +27,14 @@ function WorkPlaces({}: Props) {
             <ul className="ml-5 list-disc">
               {workingPlace.responsibilities
                 .sort((a, b) => b.length - a.length)
-                .map((responsibilities: string) => (
-                  <li className="my-5">{responsibilities}</li>
+                .map((responsibilities: string, index) => (
+                  <li className="my-5" key={index * 1.5}>
+                    {responsibilities}
+                  </li>
                 ))}
             </ul>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );

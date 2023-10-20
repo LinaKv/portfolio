@@ -28,7 +28,7 @@ export const workingPlaces: Array<workingPlace> = [
     ],
   },
   {
-    name: "iactiv.pro,",
+    name: "iactiv.pro",
     dateStart: "2023-06-01",
     dateEnd: "2023-09-01",
     responsibilities: [

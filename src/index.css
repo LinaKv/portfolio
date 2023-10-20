@@ -13,3 +13,7 @@ body,
   font-family: "PLay", sans-serif;
   @apply text-gray-500;
 }
+
+.before-at-sign::before {
+  content: "\0040"; /* Unicode character for @ symbol */
+}
