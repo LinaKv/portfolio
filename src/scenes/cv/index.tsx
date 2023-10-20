@@ -17,7 +17,7 @@ const childVariant = {
 
 function CVBlock({ setSelectedPage }: Props) {
   return (
-    <section id="cv" className="mx-auto w-5/6 pt-[88px] pb-5">
+    <section id="cv" className="mx-auto w-5/6 pt-[100px] pb-5">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.CV)}
@@ -44,8 +44,8 @@ function CVBlock({ setSelectedPage }: Props) {
           </p>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-5 md:relative">
-          <div className="flex w-full flex-col items-center md:items-start">
+        <div className="flex flex-col items-center gap-5 md:flex-row md:justify-start">
+          <div className="flex flex-col items-center md:items-start">
             {/* Rus cv */}
             <motion.div
               initial="hidden"
@@ -83,7 +83,7 @@ function CVBlock({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             variants={childVariant}
-            className="md:absolute md:top-[-20px] md:left-[350px]"
+            className=""
           >
             <FolderArrowDownIcon className="h-[300px] w-[300px] text-primary-300 opacity-10 md:h-[200px] md:w-[200px]" />
           </motion.div>

@@ -10,7 +10,7 @@ type Props = {
 
 function Portfolio({ setSelectedPage }: Props) {
   return (
-    <section className="w-full bg-neutral-50 pt-[88px]" id="ourclasses">
+    <section className="w-full bg-neutral-50 pt-[100px]" id="ourclasses">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}

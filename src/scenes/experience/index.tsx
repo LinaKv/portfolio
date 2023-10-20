@@ -13,7 +13,10 @@ function Experience({ setSelectedPage }: Props) {
   const experience = howManyWorkingExp();
 
   return (
-    <section className="w-full bg-neutral-50 pt-[88px] pb-5" id="experience">
+    <section
+      className="mt-[-40px] w-full bg-neutral-50 pt-[100px] pb-5"
+      id="experience"
+    >
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.Experience)}
@@ -43,6 +46,9 @@ function Experience({ setSelectedPage }: Props) {
           </div>
         </motion.div>
       </motion.div>
+      <div className="relative">
+        <div className="before:absolute before:top-0 before:right-0 before:z-[1] before:content-abstractwaves"></div>
+      </div>
     </section>
   );
 }

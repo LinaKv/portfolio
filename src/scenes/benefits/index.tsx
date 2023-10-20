@@ -14,7 +14,7 @@ function Benefits({ setSelectedPage }: Props) {
   return (
     <section
       id="benefits"
-      className="mx-auto  min-h-full w-5/6 pt-[88px] pb-20"
+      className="mx-auto  min-h-full w-5/6 pt-[100px] pb-20"
     >
       <motion.div
         className=""
