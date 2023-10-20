@@ -7,6 +7,7 @@ import Portfolio from "./scenes/portfolio";
 import ContactUs from "./scenes/contactUs";
 import Footer from "./scenes/footer";
 import Experience from "./scenes/experience";
+import CVBlock from "./scenes/cv";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -39,6 +40,7 @@ function App() {
       <Benefits setSelectedPage={setSelectedPage} />
       <Portfolio setSelectedPage={setSelectedPage} />
       <Experience setSelectedPage={setSelectedPage} />
+      <CVBlock setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>

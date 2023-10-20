@@ -4,6 +4,7 @@ export enum SelectedPage {
   OurClasses = "ourclasses",
   ContactUs = "contactus",
   Experience = "experience",
+  CV = "cv",
 }
 
 export interface SkillsType {

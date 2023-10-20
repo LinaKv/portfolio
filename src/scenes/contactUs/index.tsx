@@ -27,7 +27,7 @@ function ContactUs({ setSelectedPage }: Props) {
   };
 
   return (
-    <section id="contactus" className="mx-auto w-5/6 pt-[88px] pb-5">
+    <section id="contactus" className="mx-auto mt-[-88px] w-5/6 pt-[88px] pb-5">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
