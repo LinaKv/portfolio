@@ -42,13 +42,9 @@ function CVBlock({ setSelectedPage }: Props) {
             Ниже можно скачать и ознакомиться с моим резюме на русском и
             английском языках в PDF формате
           </p>
-
-          <div className="absolute top-[-70px] right-[-500px]">
-            <FolderArrowDownIcon className="h-[400px] w-[400px] opacity-10" />
-          </div>
         </motion.div>
 
-        <div className="relative">
+        <div className="flex flex-col items-center gap-5 md:relative">
           <div className="flex w-full flex-col items-center md:items-start">
             {/* Rus cv */}
             <motion.div
@@ -82,6 +78,15 @@ function CVBlock({ setSelectedPage }: Props) {
               </button>
             </motion.div>
           </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={childVariant}
+            className="md:absolute md:top-[-20px] md:left-[350px]"
+          >
+            <FolderArrowDownIcon className="h-[300px] w-[300px] text-primary-300 opacity-10 md:h-[200px] md:w-[200px]" />
+          </motion.div>
         </div>
       </motion.div>
     </section>
