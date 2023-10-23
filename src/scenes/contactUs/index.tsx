@@ -29,7 +29,7 @@ function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="mx-auto  w-5/6 pt-[100px] pb-5 md:mt-[-40px]"
+      className="mx-auto w-5/6 pt-[100px] pb-5 md:mt-[-40px] lg:w-2/4"
     >
       <motion.div
         className=""
@@ -37,7 +37,7 @@ function ContactUs({ setSelectedPage }: Props) {
       >
         {/* header */}
         <motion.div
-          className="md:w-3/5"
+          className="md:w-3/5 lg:mx-auto lg:w-5/6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -87,7 +87,7 @@ function ContactUs({ setSelectedPage }: Props) {
           </motion.div>
         </motion.div>
         {/* FORM and IMG */}
-        <div className="mt-10 justify-between gap-8 md:flex">
+        <div className="mt-10 justify-between gap-8 md:flex lg:mx-auto lg:w-5/6">
           <motion.div
             className="mt-10 basis-3/5 md:mt-0"
             initial="hidden"

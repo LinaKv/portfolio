@@ -17,7 +17,10 @@ const childVariant = {
 
 function CVBlock({ setSelectedPage }: Props) {
   return (
-    <section id="cv" className="mx-auto w-full bg-neutral-50 pt-[100px] pb-5">
+    <section
+      id="cv"
+      className="mx-auto w-full bg-neutral-50 pt-[100px] pb-5 lg:w-2/4"
+    >
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.CV)}

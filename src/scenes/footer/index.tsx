@@ -1,6 +1,6 @@
 function footer() {
   return (
-    <footer className="bg-gray-50 py-10">
+    <footer className="mx-auto bg-gray-50 py-10 lg:w-2/4">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="mt-5 basis-1/2 md:mt-0">
           <p className="my-5">

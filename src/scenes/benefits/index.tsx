@@ -14,7 +14,7 @@ function Benefits({ setSelectedPage }: Props) {
   return (
     <section
       id="benefits"
-      className="mx-auto min-h-full w-5/6 pt-[100px] pb-20"
+      className="mx-auto min-h-full w-5/6 pt-[100px] pb-20 lg:w-2/4"
     >
       <motion.div
         className=""
@@ -22,7 +22,7 @@ function Benefits({ setSelectedPage }: Props) {
       >
         {/* Header */}
         <motion.div
-          className="md:my-5 md:w-3/5"
+          className="md:my-5 md:w-3/5 lg:mx-auto lg:w-5/6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -40,7 +40,7 @@ function Benefits({ setSelectedPage }: Props) {
         </motion.div>
 
         {/* Benefits */}
-        <div className="md:flex md:justify-between">
+        <div className="md:flex md:justify-between lg:mx-auto lg:w-5/6">
           <div className="mt-5 items-center justify-center gap-5 md:flex md:flex-col md:flex-wrap md:items-start">
             <Skills
               typeOfSkillsToDisplay="Языки программирования"
@@ -69,7 +69,7 @@ function Benefits({ setSelectedPage }: Props) {
         </div>
 
         {/* Graphics and description*/}
-        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex lg:mx-auto lg:w-5/6">
           {/* graphics */}
           <img
             className="mx-auto mb-16"

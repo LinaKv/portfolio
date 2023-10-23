@@ -17,7 +17,7 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="h-max gap-16 bg-neutral-50 pt-20 pb-5 md:pb-0 md:pt-20"
+      className="h-max gap-16 bg-neutral-50 pt-20 pb-5 md:pb-0 md:pt-20 lg:mx-auto lg:w-2/4"
     >
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
