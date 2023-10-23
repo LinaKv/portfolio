@@ -15,7 +15,7 @@ function Benefit({ title }: Props) {
       initial="hidden"
       whileInView="visible"
       variants={childVariant}
-      className="mt-5 flex justify-center rounded-md border-2 border-gray-100 px-2 py-2 text-center"
+      className="mt-5 flex justify-center rounded-md border-2 border-primary-100 px-2 py-2 text-center  "
     >
       <h4 className="font-bold">{title}</h4>
     </motion.div>

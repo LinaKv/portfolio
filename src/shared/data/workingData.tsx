@@ -6,7 +6,7 @@ export const workingPlaces: Array<workingPlace> = [
     dateStart: "2022-10-01",
     dateEnd: null,
     responsibilities: [
-      `Разработала новый функционал (логику и элементы 
+      `Разработала  новый функционал (логику и элементы 
             интерфейса) на TypeScript при помощи Azure Functions, 
             позволяющий юзерам выполнять необходимые манипуляции 
             с информацией`,

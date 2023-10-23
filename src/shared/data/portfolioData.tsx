@@ -24,6 +24,7 @@ export const classes: Array<ClassType> = [
           <a
             href="https://github.com/LinaKv/forkify-course-study.git"
             target="_blank"
+            className="underline underline-offset-2"
           >
             GitHub
           </a>
@@ -32,6 +33,7 @@ export const classes: Array<ClassType> = [
           <a
             href="https://wondrous-paprenjak-49e84c.netlify.app/"
             target="_blank"
+            className="underline underline-offset-2"
           >
             Netlify
           </a>
@@ -55,7 +57,11 @@ export const classes: Array<ClassType> = [
           Загрузка в базу данных файлов типа jpg и их дальнейшее использование.
         </p>
         <p>
-          <a href="https://github.com/LinaKv/House-market.git" target="_blank">
+          <a
+            href="https://github.com/LinaKv/House-market.git"
+            className="underline underline-offset-2"
+            target="_blank"
+          >
             GitHub
           </a>
         </p>
@@ -80,6 +86,7 @@ export const classes: Array<ClassType> = [
           <a
             href="https://github.com/LinaKv/Fullstack-App/tree/main"
             target="_blank"
+            className="underline underline-offset-2"
           >
             GitHub
           </a>
@@ -101,7 +108,11 @@ export const classes: Array<ClassType> = [
           находится в разработке. В данный момент ведется разработка сервера
         </p>
         <p>
-          <a href="https://github.com/LinaKv/noAnx" target="_blank">
+          <a
+            href="https://github.com/LinaKv/noAnx"
+            target="_blank"
+            className="underline underline-offset-2"
+          >
             GitHub
           </a>
         </p>
@@ -120,12 +131,17 @@ export const classes: Array<ClassType> = [
           <a
             href="https://github.com/LinaKv/gym-application-ts"
             target="_blank"
+            className="underline underline-offset-2"
           >
             GitHub
           </a>
         </p>
         <p>
-          <a href="https://gym-application-ts.pages.dev/" target="_blank">
+          <a
+            href="https://gym-application-ts.pages.dev/"
+            target="_blank"
+            className="underline underline-offset-2"
+          >
             Посмотреть сайт
           </a>
         </p>
