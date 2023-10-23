@@ -14,7 +14,7 @@ function Benefits({ setSelectedPage }: Props) {
   return (
     <section
       id="benefits"
-      className="mx-auto  min-h-full w-5/6 pt-[100px] pb-20"
+      className="mx-auto min-h-full w-5/6 pt-[100px] pb-20"
     >
       <motion.div
         className=""
@@ -40,7 +40,7 @@ function Benefits({ setSelectedPage }: Props) {
         </motion.div>
 
         {/* Benefits */}
-        <div className="md:flex md:justify-around">
+        <div className="md:flex md:justify-between">
           <div className="mt-5 items-center justify-center gap-5 md:flex md:flex-col md:flex-wrap md:items-start">
             <Skills
               typeOfSkillsToDisplay="Языки программирования"
@@ -129,7 +129,7 @@ function Benefits({ setSelectedPage }: Props) {
                 <li className="mb-5">
                   Интегрировать клиентскую часть с серверной через Rest API;
                 </li>
-                <li className="mb-5">Покрыть код e2e, Unit-тестами</li>
+                <li className="mb-5">Покрыть код Unit-тестами</li>
                 <li className="mb-5">
                   Рефакторить, оптимизировать ранее написанный код.
                 </li>

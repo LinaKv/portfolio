@@ -10,13 +10,16 @@ type Props = {
 
 function Skills({ typeOfSkills, typeOfSkillsToDisplay }: Props) {
   return (
-    <div className="md:flex md:items-center md:gap-5">
-      <h1 className="mt-5 font-bold">{typeOfSkillsToDisplay}</h1>
-      {skills
-        .filter((skill: SkillsType) => skill.type === typeOfSkills)
-        .map((skill: SkillsType) => (
-          <Benefit key={skill.title} title={skill.title} />
-        ))}
+    <div className="md:flex md:flex-col md:items-start md:justify-start">
+      <h1 className="mt-10 font-bold">{typeOfSkillsToDisplay}</h1>
+      {/* skills */}
+      <div className="gap-5 md:flex">
+        {skills
+          .filter((skill: SkillsType) => skill.type === typeOfSkills)
+          .map((skill: SkillsType) => (
+            <Benefit key={skill.title} title={skill.title} />
+          ))}
+      </div>
     </div>
   );
 }

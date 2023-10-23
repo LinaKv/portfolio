@@ -17,14 +17,14 @@ const childVariant = {
 
 function CVBlock({ setSelectedPage }: Props) {
   return (
-    <section id="cv" className="mx-auto w-5/6 pt-[100px] pb-5">
+    <section id="cv" className="mx-auto w-full bg-neutral-50 pt-[100px] pb-5">
       <motion.div
         className=""
         onViewportEnter={() => setSelectedPage(SelectedPage.CV)}
       >
         {/* header */}
         <motion.div
-          className="relative md:w-3/5"
+          className="mx-auto w-5/6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -35,16 +35,16 @@ function CVBlock({ setSelectedPage }: Props) {
           }}
         >
           <HText>
-            <span className="text-secondary-500">РЕЗЮМЕ</span> можно скачать на
-            русском и английском
+            Подробнее можно ознакомиться в{" "}
+            <span className="text-secondary-500">РЕЗЮМЕ</span>
           </HText>
           <p className="my-5">
-            Ниже можно скачать и ознакомиться с моим резюме на русском и
-            английском языках в PDF формате
+            Ниже можно скачать и ознакомиться с резюме на русском и английском
+            языках в PDF формате
           </p>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-5 md:flex-row md:justify-start">
+        <div className="mx-auto flex w-5/6 flex-col items-center gap-5 md:flex-row md:justify-start">
           <div className="flex flex-col items-center md:items-start">
             {/* Rus cv */}
             <motion.div
@@ -57,7 +57,7 @@ function CVBlock({ setSelectedPage }: Props) {
                 className="mt-5 w-[300px] rounded-lg bg-secondary-500 px-10 py-3 transition duration-500 hover:text-white"
               >
                 <a href={CVRus} download="PolinaKvitka.pdf">
-                  Резюме Полина Квитка
+                  Скачать резюме
                 </a>
               </button>
             </motion.div>
@@ -73,7 +73,7 @@ function CVBlock({ setSelectedPage }: Props) {
                 className="mt-5 w-[300px] rounded-lg bg-secondary-500 px-10 py-3 transition duration-500 hover:text-white"
               >
                 <a href={CVEng} download="PolinaKvitka.pdf">
-                  CV Polina Kvitka
+                  Download CV
                 </a>
               </button>
             </motion.div>
