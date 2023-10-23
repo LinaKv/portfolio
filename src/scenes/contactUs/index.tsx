@@ -69,7 +69,7 @@ function ContactUs({ setSelectedPage }: Props) {
           <a
             href="https://t.me/polina_obw"
             target="_blank"
-            className="flex w-max items-start gap-5 rounded-lg bg-blue-500 py-3  px-5 text-white transition duration-500 hover:text-white"
+            className="pulse flex w-max items-start gap-5 rounded-full bg-blue-500  py-3 px-5 text-white transition duration-500 hover:text-white"
           >
             <svg
               className="h-6 w-6"
