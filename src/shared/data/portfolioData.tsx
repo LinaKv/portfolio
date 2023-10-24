@@ -6,7 +6,7 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import Class from "../../scenes/portfolio/Portfolio";
 
-export const classes: Array<ClassType> = [
+export const portfolio: Array<ClassType> = [
   {
     name: "FORKIFY",
     description: (
