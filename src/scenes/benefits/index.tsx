@@ -34,8 +34,7 @@ function Benefits({ setSelectedPage }: Props) {
         >
           <HText>Навыки</HText>
           <p className="my-5 text-sm">
-            Мои навыки, которыми я обладаю, и технологии с которыми я знакома и
-            умею работать
+            Здесь собраны основные технологии с которыми я умею работать
           </p>
         </motion.div>
 

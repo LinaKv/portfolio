@@ -35,6 +35,10 @@ export const skills: Array<SkillsType> = [
     type: "library",
   },
   {
+    title: "react-router-dom",
+    type: "framework",
+  },
+  {
     title: "SASS",
     type: "language",
   },
