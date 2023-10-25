@@ -20,24 +20,26 @@ export const portfolio: Array<ClassType> = [
           кодом, запросами на сервер. Сборщик модулей - Parcel. Использование
           LocalStorage. Публикация проекта на Netlify
         </p>
-        <p>
-          <a
-            href="https://github.com/LinaKv/forkify-course-study.git"
-            target="_blank"
-            className="underline underline-offset-2"
-          >
-            GitHub
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://wondrous-paprenjak-49e84c.netlify.app/"
-            target="_blank"
-            className="underline underline-offset-2"
-          >
-            Netlify
-          </a>
-        </p>
+        <div className="flex items-start gap-5 py-2">
+          <p>
+            <a
+              href="https://github.com/LinaKv/forkify-course-study.git"
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              GitHub
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://wondrous-paprenjak-49e84c.netlify.app/"
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              Посмотреть сайт
+            </a>
+          </p>
+        </div>
       </div>
     ),
     image: image1,
@@ -127,24 +129,26 @@ export const portfolio: Array<ClassType> = [
         <p className="py-2">
           Stack: TypeScript, Tailwind, React, Framer-motion (Лендинг)
         </p>
-        <p>
-          <a
-            href="https://github.com/LinaKv/gym-application-ts"
-            target="_blank"
-            className="underline underline-offset-2"
-          >
-            GitHub
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://gym-application-ts.pages.dev/"
-            target="_blank"
-            className="underline underline-offset-2"
-          >
-            Посмотреть сайт
-          </a>
-        </p>
+        <div className="flex items-start gap-5 py-2">
+          <p>
+            <a
+              href="https://github.com/LinaKv/gym-application-ts"
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              GitHub
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://gym-application-ts.pages.dev/"
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              Посмотреть сайт
+            </a>
+          </p>
+        </div>
       </div>
     ),
     image: image5,

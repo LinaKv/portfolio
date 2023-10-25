@@ -34,7 +34,7 @@ function Benefits({ setSelectedPage }: Props) {
         >
           <HText>Навыки</HText>
           <p className="my-5 text-sm">
-            Здесь собраны основные технологии с которыми я умею работать
+            Здесь собраны основные технологии с которыми я работаю
           </p>
         </motion.div>
 
@@ -112,26 +112,16 @@ function Benefits({ setSelectedPage }: Props) {
               }}
             >
               <ul className="ml-5 list-disc">
-                <li className="my-5">
-                  Разработать приложение (SPA,SSR) на React, JavaScript,
-                  TypeScript;
-                </li>
+                <li className="my-5">Разработать приложение (SPA,SSR)</li>
                 <li className="mb-5">
                   Осуществить кросс-браузерную, адаптивную верстку
                   пользовательских интерфейсов, компонентов/элементов дизайна
-                  (CSS, SASS, CSS-in-JS)
-                </li>
-                <li className="mb-5">
-                  Реализовать логику работы функционала всех пользовательских
-                  интерфейсов (Redux, Redux Toolkit);
                 </li>
                 <li className="mb-5">
                   Интегрировать клиентскую часть с серверной через Rest API;
                 </li>
                 <li className="mb-5">Покрыть код Unit-тестами</li>
-                <li className="mb-5">
-                  Рефакторить, оптимизировать ранее написанный код.
-                </li>
+                <li className="mb-5">Оптимизировать ранее написанный код</li>
               </ul>
             </motion.div>
             {/* button */}
