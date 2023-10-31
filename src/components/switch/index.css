@@ -1,7 +1,7 @@
 .switchWrapper {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0;
 }
 
 .switchWrapper > span {
@@ -27,13 +27,13 @@ input.check-toggle-round-flat:checked ~ .on {
 
 .switchWrapper > span.on {
   left: 0;
-  padding-left: 2px;
+  padding-left: 4px;
   color: #ffb647;
 }
 
 .switchWrapper > span.off {
   right: 0;
-  padding-right: 4px;
+  padding-right: 2px;
   color: #fff;
 }
 
@@ -84,9 +84,9 @@ input.check-toggle-round-flat + label:before {
   border-radius: 60px;
 }
 input.check-toggle-round-flat + label:after {
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
   width: 48px;
   background-color: #fff;
   -webkit-border-radius: 52px;
@@ -98,9 +98,6 @@ input.check-toggle-round-flat + label:after {
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;
   transition: margin 0.2s;
-}
-
-input.check-toggle-round-flat:checked + label {
 }
 
 input.check-toggle-round-flat:checked + label:after {

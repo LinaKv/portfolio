@@ -1,16 +1,19 @@
-import ActionButton from "@/shared/ActionButton";
-import HText from "@/shared/HText";
+import ActionButton from "@/components/ActionButton";
+import HText from "@/components/HText";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.jpg";
 import Programming from "@/assets/progr.png";
 import Skills from "./Skills";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 function Benefits({ setSelectedPage }: Props) {
+  const { language } = useMyContext();
+
   return (
     <section
       id="benefits"
@@ -32,9 +35,11 @@ function Benefits({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>Навыки</HText>
+          <HText>{language ? "Навыки" : "Skills"}</HText>
           <p className="my-5 text-sm">
-            Здесь собраны основные технологии с которыми я работаю
+            {language
+              ? "Здесь собраны основные технологии с которыми я работаю"
+              : "Here are the main technologies I work with"}
           </p>
         </motion.div>
 
@@ -42,7 +47,9 @@ function Benefits({ setSelectedPage }: Props) {
         <div className="md:flex md:justify-between lg:mx-auto lg:w-5/6">
           <div className="mt-5 items-center justify-center gap-5 md:flex md:flex-col md:flex-wrap md:items-start">
             <Skills
-              typeOfSkillsToDisplay="Языки программирования"
+              typeOfSkillsToDisplay={
+                language ? "Языки программирования" : "Languages"
+              }
               typeOfSkills="language"
             />
 
@@ -50,13 +57,22 @@ function Benefits({ setSelectedPage }: Props) {
               typeOfSkillsToDisplay="Framework"
               typeOfSkills="framework"
             />
-            <Skills typeOfSkillsToDisplay="Базы Данных" typeOfSkills="bd" />
-            <Skills typeOfSkillsToDisplay="Библиотеки" typeOfSkills="library" />
             <Skills
-              typeOfSkillsToDisplay="Тестирование"
+              typeOfSkillsToDisplay={language ? "Базы Данных" : "Database"}
+              typeOfSkills="bd"
+            />
+            <Skills
+              typeOfSkillsToDisplay={language ? "Библиотеки" : "Libraries"}
+              typeOfSkills="library"
+            />
+            <Skills
+              typeOfSkillsToDisplay={language ? "Тестирование" : "Testing"}
               typeOfSkills="testing"
             />
-            <Skills typeOfSkillsToDisplay="Прочее" typeOfSkills="other" />
+            <Skills
+              typeOfSkillsToDisplay={language ? "Прочее" : "Other"}
+              typeOfSkills="other"
+            />
           </div>
           <div className="md:flex md:items-center">
             <img
@@ -92,7 +108,9 @@ function Benefits({ setSelectedPage }: Props) {
                   }}
                 >
                   <HText>
-                    ЧТО Я МОГУ СДЕЛАТЬ ДЛЯ ВАШЕГО ПРОЕКТА, КАК{" "}
+                    {language
+                      ? "ЧТО Я МОГУ СДЕЛАТЬ ДЛЯ ВАШЕГО ПРОЕКТА, КАК"
+                      : "WHAT I CAN DO FOR YOUR PROJECT AS"}{" "}
                     <span className="text-secondary-500">
                       FRONTEND DEVELOPER
                     </span>
@@ -112,23 +130,38 @@ function Benefits({ setSelectedPage }: Props) {
               }}
             >
               <ul className="ml-5 list-disc">
-                <li className="my-5">Разработать приложение (SPA,SSR)</li>
-                <li className="mb-5">
-                  Осуществить кросс-браузерную, адаптивную верстку
-                  пользовательских интерфейсов, компонентов/элементов дизайна
+                <li className="my-5">
+                  {language
+                    ? "Разработать приложение (SPA,SSR)"
+                    : "Develop an application (SPA, SSR)"}
                 </li>
                 <li className="mb-5">
-                  Интегрировать клиентскую часть с серверной через Rest API;
+                  {language
+                    ? "Осуществить кросс-браузерную, адаптивную верстку пользовательских интерфейсов, компонентов/элементов дизайна"
+                    : "Implement cross-browser, responsive layout for user interfaces, design components/elements"}
                 </li>
-                <li className="mb-5">Покрыть код Unit-тестами</li>
-                <li className="mb-5">Оптимизировать ранее написанный код</li>
+                <li className="mb-5">
+                  {language
+                    ? "Интегрировать клиентскую часть с серверной через Rest API"
+                    : "Integrate the client-side with the server-side through a Rest API"}
+                </li>
+                <li className="mb-5">
+                  {language
+                    ? "Покрыть код Unit-тестами"
+                    : "Cover the code with unit tests"}
+                </li>
+                <li className="mb-5">
+                  {language
+                    ? "Оптимизировать ранее написанный код"
+                    : "Optimize previously written code"}
+                </li>
               </ul>
             </motion.div>
             {/* button */}
             <div className="relative mt-16">
               <div className="before-bottom-20 before:absolute before:right-40  before:top-10 before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>
-                  Связаться со мной сейчас
+                  {language ? "Связаться со мной" : "Connect with me"}
                 </ActionButton>
               </div>
             </div>

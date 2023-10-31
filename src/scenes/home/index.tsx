@@ -1,18 +1,18 @@
 import React from "react";
 import { SelectedPage } from "@/shared/types";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/shared/ActionButton";
+import ActionButton from "@/components/ActionButton";
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
+  const { language, updateLanguage } = useMyContext();
 
   return (
     <section
@@ -42,8 +42,9 @@ const Home = ({ setSelectedPage }: Props) => {
               </div>
             </div>
             <p className="mt-8 text-sm">
-              Тот самый разработчик, чей путь начался с добавления снежинок в
-              html в 13 лет
+              {language
+                ? "Тот самый разработчик, чей путь начался с добавления снежинок в html в 13 лет"
+                : "The developer whose journey began with adding snowflakes to HTML at the age of 13"}
             </p>
           </motion.div>
           {/* actions */}
@@ -60,14 +61,14 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               {" "}
-              Связаться сейчас
+              {language ? "Связаться со мной" : "Connect with me"}
             </ActionButton>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.OurClasses)}
               href={`#${SelectedPage.OurClasses}`}
             >
-              <p>Портфолио</p>
+              <p>{language ? "Проекты" : "Portfolio"}</p>
             </AnchorLink>
           </motion.div>
         </div>

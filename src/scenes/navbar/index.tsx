@@ -3,8 +3,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/shared/ActionButton";
+import ActionButton from "@/components/ActionButton";
 import Switch from "@/components/switch/Switch";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   isTopOfPage: boolean;
@@ -17,6 +18,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-gray-50 drop-shadow";
+  const { language } = useMyContext();
 
   return (
     <nav>
@@ -25,7 +27,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
-            {/* <img alt="logo" src={Logo} /> */}
             <Link
               name="FRONTEND DEVELOPER"
               page="Home"
@@ -35,33 +36,33 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-sm`}>
+                <div className={`${flexBetween} min-w-[551px] gap-8 text-sm`}>
                   <Link
-                    name="Домой"
+                    name={language ? "Домой" : "Home"}
                     page="Home"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    name="Мои навыки"
+                    name={language ? "Скиллы" : "Skills"}
                     page="Benefits"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    name="Мои проекты"
+                    name={language ? "Проекты" : "Portfolio"}
                     page="Our Classes"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    name="Мой опыт работы"
+                    name={language ? "Опыт работы" : "Experience"}
                     page="Experience"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    name="Резюме"
+                    name={language ? "Резюме" : "CV"}
                     page="CV"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
@@ -69,9 +70,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
                   <Switch />
                 </div>
-                <div className={`${flexBetween} gap-8`}>
+                <div className={`${flexBetween}  gap-8`}>
                   <ActionButton setSelectedPage={setSelectedPage}>
-                    Связаться со мной
+                    {language ? "Связаться со мной" : "Connect with me"}
                   </ActionButton>
                 </div>
               </div>
@@ -89,57 +90,59 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
       {/* {Mobile menu} */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-500 drop-shadow-xl">
           {/*close icon  */}
-          <div className="flex justify-end p-12">
+          <div className="flex  justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
               <XMarkIcon className="h-6 w-6 text-gray-400" />
             </button>
           </div>
           {/* menu */}
-          <div
-            className="ml-5 flex flex-col items-start gap-10 text-2xl"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
-          >
-            <Link
-              name="Домой"
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              name="Скиллы"
-              page="Benefits"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              name="Портфолио"
-              page="Our Classes"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              name="Опыт работы"
-              page="Experience"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              name="Резюме"
-              page="CV"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              name="Связаться со мной"
-              page="Contact Us"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-          </div>
-          <div className="mt-20 ml-2">
-            <Switch />
+          <div className="ml-5 flex h-4/5 flex-col justify-between">
+            <div
+              className=" flex flex-col items-start gap-10 text-2xl"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
+              <Link
+                name={language ? "Домой" : "Home"}
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                name={language ? "Скиллы" : "Skills"}
+                page="Benefits"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                name={language ? "Проекты" : "Portfolio"}
+                page="Our Classes"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                name={language ? "Опыт работы" : "Experience"}
+                page="Experience"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                name={language ? "Резюме" : "CV"}
+                page="CV"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                name={language ? "Связаться со мной" : "Connect with me"}
+                page="Contact Us"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+            </div>
+            <div className="mt-20">
+              <Switch />
+            </div>
           </div>
         </div>
       )}

@@ -1,13 +1,17 @@
 import React from "react";
 import "./index.css";
 import { useState } from "react";
+import { useMyContext } from "@/context/MyContext";
 
 function Switch() {
-  const [isChecked, setIsChecked] = useState(false);
+  const { language, updateLanguage } = useMyContext();
+  const [isChecked, setIsChecked] = useState(!language);
 
   const handleCheckboxChange = () => {
+    // this is for switch to remember it's state
+    updateLanguage(!language);
     setIsChecked((prev) => !prev);
-    console.log(isChecked);
+    // console.log(isChecked);
   };
 
   return (
