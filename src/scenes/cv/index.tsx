@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SelectedPage } from "@/shared/types";
-import HText from "@/shared/HText";
+import HText from "@/components/HText";
 import CVRus from "../../shared/data/CVRus.pdf";
 import CVEng from "../../shared/data/CV.pdf";
 import { FolderArrowDownIcon } from "@heroicons/react/24/solid";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -16,6 +17,8 @@ const childVariant = {
 };
 
 function CVBlock({ setSelectedPage }: Props) {
+  const { language } = useMyContext();
+
   return (
     <section
       id="cv"
@@ -38,12 +41,17 @@ function CVBlock({ setSelectedPage }: Props) {
           }}
         >
           <HText>
-            Подробнее можно ознакомиться в{" "}
-            <span className="text-secondary-500">РЕЗЮМЕ</span>
+            {language
+              ? "Подробнее можно ознакомиться в "
+              : "You can learn more details in the "}
+            <span className="text-secondary-500">
+              {language ? "РЕЗЮМЕ" : "CV"}
+            </span>
           </HText>
           <p className="my-5">
-            Ниже можно скачать и ознакомиться с резюме на русском и английском
-            языках в PDF формате
+            {language
+              ? "Ниже можно скачать и ознакомиться с резюме на русском и английском языках в PDF формате"
+              : "Below, you can download and review the resume in Russian and English languages in PDF format"}
           </p>
         </motion.div>
 

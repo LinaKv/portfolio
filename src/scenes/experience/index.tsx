@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import HText from "@/shared/HText";
+import HText from "@/components/HText";
 import { SelectedPage } from "@/shared/types";
 import { howManyWorkingExp } from "@/helpers";
 import WorkPlaces from "./WorkPlaces";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 function Experience({ setSelectedPage }: Props) {
-  const experience = howManyWorkingExp();
+  const { language } = useMyContext();
+
+  let experience = howManyWorkingExp(language);
+  useEffect(() => {
+    experience = howManyWorkingExp(language);
+  }, [language]);
 
   return (
     <section
@@ -33,9 +39,11 @@ function Experience({ setSelectedPage }: Props) {
           }}
         >
           <div className=" md:w-3/5">
-            <HText>ОПЫТ РАБОТЫ</HText>
+            <HText>{language ? "ОПЫТ РАБОТЫ" : "EXPERIENCE"}</HText>
             <p className="py-5">
-              Мой коммерческий опыт работы составляет{" "}
+              {language
+                ? "Мой коммерческий опыт работы составляет"
+                : "My commercial work experience is"}{" "}
               <span className="font-montserrat text-xl font-bold text-secondary-500">
                 {experience}
               </span>

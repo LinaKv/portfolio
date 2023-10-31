@@ -14,7 +14,8 @@ export interface SkillsType {
 
 export interface ClassType {
   name: string;
-  description?: string | React.ReactNode;
+  descriptionRus?: string | React.ReactNode;
+  descriptionEng?: string | React.ReactNode;
   image: string;
 }
 
@@ -22,5 +23,6 @@ export interface workingPlace {
   name: string;
   dateStart: string;
   dateEnd: string | null;
-  responsibilities: string[];
+  responsibilitiesRus: string[];
+  responsibilitiesEng: string[];
 }

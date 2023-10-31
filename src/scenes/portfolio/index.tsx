@@ -1,18 +1,21 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import HText from "@/shared/HText";
+import HText from "@/components/HText";
 import Project from "./Portfolio";
 import { portfolio } from "../../shared/data/portfolioData";
 import {
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
 } from "@heroicons/react/24/solid";
+import { useMyContext } from "@/context/MyContext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 function Portfolio({ setSelectedPage }: Props) {
+  const { language } = useMyContext();
+
   return (
     <section
       className="w-full bg-neutral-50 pt-[100px]  lg:mx-auto lg:w-2/4"
@@ -34,15 +37,16 @@ function Portfolio({ setSelectedPage }: Props) {
           }}
         >
           <div className="md:w-3/5">
-            <HText>ПОРТФОЛИО</HText>
+            <HText>{language ? "ПОРТФОЛИО" : "PORTFOLIO"}</HText>
             <p className="py-5">
-              Здесь можно посмотреть мои проекты, которые я выполняла, чтобы
-              научиться чему-то новому или реализовать какую-то свою идею.
-              Некоторые из них еще находятся в процессе разработки.
+              {language
+                ? "Здесь можно посмотреть мои проекты, которые я выполняла, чтобы научиться чему-то новому или реализовать какую-то свою идею. Некоторые из них еще находятся в процессе разработки"
+                : "Here you can see my projects that I have worked on to learn something new or implement my own idea. Some of them are still in the development process"}
             </p>
             <p className="py-5">
-              Чтобы узнать больше про проект, можно нажать на него, прочитать
-              краткое описание и перейти на git или на деплой данного проекта
+              {language
+                ? "Чтобы узнать больше про проект, можно нажать на него, прочитать краткое описание и перейти на git или на деплой данного проекта"
+                : "To learn more about a project, you can click on it, read a brief description, and navigate to its GitHub repository or deployment"}
             </p>
           </div>
         </motion.div>
@@ -61,7 +65,7 @@ function Portfolio({ setSelectedPage }: Props) {
         >
           <div className="mb-5 mt-10 flex w-[400px] animate-bounce items-center justify-center gap-5 px-5 ">
             <ArrowLeftCircleIcon className="h-[40px] w-[40px] text-secondary-500" />
-            Нажми или Свайпни
+            {language ? "Нажми или Свайпни" : "Press or Swipe"}
             <ArrowRightCircleIcon className="h-[40px] w-[40px] text-secondary-500" />
           </div>
         </motion.div>
@@ -72,7 +76,9 @@ function Portfolio({ setSelectedPage }: Props) {
               <Project
                 key={`${item.name}-${index}`}
                 name={item.name}
-                description={item.description}
+                description={
+                  language ? item.descriptionRus : item.descriptionEng
+                }
                 image={item.image}
               />
             ))}
