@@ -11,7 +11,6 @@ function Switch() {
     // this is for switch to remember it's state
     updateLanguage(!language);
     setIsChecked((prev) => !prev);
-    // console.log(isChecked);
   };
 
   return (

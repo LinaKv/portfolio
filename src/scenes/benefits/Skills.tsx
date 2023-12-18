@@ -13,7 +13,7 @@ function Skills({ typeOfSkills, typeOfSkillsToDisplay }: Props) {
     <div className="md:flex md:flex-col md:items-start md:justify-start">
       <h1 className="mt-10 font-bold">{typeOfSkillsToDisplay}</h1>
       {/* skills */}
-      <div className="gap-5 md:flex">
+      <div className="mt-2 flex-wrap gap-5 md:flex">
         {skills
           .filter((skill: SkillsType) => skill.type === typeOfSkills)
           .map((skill: SkillsType) => (

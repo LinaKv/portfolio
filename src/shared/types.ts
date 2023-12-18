@@ -14,8 +14,9 @@ export interface SkillsType {
 
 export interface ClassType {
   name: string;
-  descriptionRus?: string | React.ReactNode;
-  descriptionEng?: string | React.ReactNode;
+  deploy?: string;
+  git: string;
+  description: string;
   image: string;
 }
 

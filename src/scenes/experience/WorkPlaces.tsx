@@ -1,73 +1,90 @@
 import React from "react";
 import { workingPlaces } from "@/shared/data/workingData";
 import { workingPlace } from "@/shared/types";
-import {
-  convertDataRUS,
-  convertDataENG,
-  howManyDaysOnThisWorkRUS,
-  howManyDaysOnThisWorkENG,
-} from "@/helpers";
 import { useMyContext } from "@/context/MyContext";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import iconReact from "@/assets/react-logo.png";
 
-type Props = {};
+type Props = {
+  experience: workingPlace;
+  language: boolean;
+};
 
-function WorkPlaces({}: Props) {
+const ExperienceCard = ({ experience, language }: Props) => (
+  <VerticalTimelineElement
+    contentStyle={{
+      background: "#FAFAFA",
+      color: "#3D553A",
+    }}
+    contentArrowStyle={{
+      borderRadius: "7px solid #232631",
+    }}
+    date={experience.dateStart}
+    iconStyle={{
+      background: "#FAFAFA",
+      color: "#FFB647",
+    }}
+    icon={
+      <div className="flex h-full w-full items-center justify-center">
+        <img
+          src={iconReact}
+          alt={experience.name}
+          className="h-[60%] w-[60%] object-contain"
+        />
+      </div>
+    }
+  >
+    <div className="">
+      <h3 className="text-[24px] font-bold text-secondary-500">
+        Frontend Developer
+      </h3>
+      <p className="text-secondary text-[16px] font-bold" style={{ margin: 0 }}>
+        {experience.name}
+      </p>
+    </div>
+
+    <ul className="mt-5 ml-5 list-disc space-y-2">
+      {language
+        ? experience.responsibilitiesRus.map((point: string, index: number) => (
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 pl-1"
+            >
+              {point}
+            </li>
+          ))
+        : experience.responsibilitiesEng.map((point: string, index: number) => (
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 pl-1"
+            >
+              {point}
+            </li>
+          ))}
+    </ul>
+  </VerticalTimelineElement>
+);
+
+function WorkPlaces() {
   const { language } = useMyContext();
 
   return (
     <div className="mt-[-30px]">
-      {workingPlaces.map((workingPlace: workingPlace) => (
-        <div key={workingPlace.name}>
-          <div className="mt-10">
-            <p className="text-xl font-bold">{workingPlace.name}</p>
-            {language ? (
-              <p className="text-s text-primary-100">
-                {convertDataRUS(workingPlace.dateStart)} -
-                {convertDataRUS(workingPlace.dateEnd) || " по настоящее время"}
-              </p>
-            ) : (
-              <p className="text-s text-primary-100">
-                {convertDataENG(workingPlace.dateStart)} -{" "}
-                {convertDataENG(workingPlace.dateEnd) || " present"}
-              </p>
-            )}
-            {language ? (
-              <p className="text-m font-bold text-secondary-500">
-                {howManyDaysOnThisWorkRUS(
-                  workingPlace.dateStart,
-                  workingPlace.dateEnd
-                )}
-              </p>
-            ) : (
-              <p className="text-m font-bold text-secondary-500">
-                {howManyDaysOnThisWorkENG(
-                  workingPlace.dateStart,
-                  workingPlace.dateEnd
-                )}
-              </p>
-            )}
-          </div>
-          <div className="">
-            <ul className="ml-5 list-disc">
-              {language
-                ? workingPlace.responsibilitiesRus
-                    .sort((a, b) => b.length - a.length)
-                    .map((responsibilities: string, index) => (
-                      <li className="my-5" key={index * 1.5}>
-                        {responsibilities}
-                      </li>
-                    ))
-                : workingPlace.responsibilitiesEng
-                    .sort((a, b) => b.length - a.length)
-                    .map((responsibilities: string, index) => (
-                      <li className="my-5" key={index * 1.5}>
-                        {responsibilities}
-                      </li>
-                    ))}
-            </ul>
-          </div>
-        </div>
-      ))}
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {workingPlaces.map((experience, index) => (
+            <ExperienceCard
+              key={`experience-${index}`}
+              experience={experience}
+              language={language}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
     </div>
   );
 }
