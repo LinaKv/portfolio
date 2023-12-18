@@ -16,7 +16,6 @@ type Props = {
 
 const ExperienceCard = ({ experience, language }: Props) => (
   <VerticalTimelineElement
-    lineColor={{ background: "#3D553A" }}
     contentStyle={{
       background: "#FAFAFA",
       color: "#3D553A",
