@@ -20,11 +20,11 @@ const Home = ({ setSelectedPage }: Props) => {
       className="relative h-max w-full gap-16 bg-[#550C18] pt-10 pb-5 text-gray-50 md:pb-0 md:pt-20 lg:mx-auto lg:w-2/4"
     >
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-[600px]"
+        className="mx-auto mb-5 flex w-5/6 flex-wrap-reverse items-center justify-center md:mb-0 md:h-[600px] md:flex-nowrap"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
-        <div className="z-10 mt-24 md:basis-3/5">
+        <div className="z-10 mt-5 md:mt-24 md:basis-3/5">
           {/* HEADINGS */}
           <div>
             <div className="relative">
@@ -66,7 +66,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
         {/* img */}
         <div
-          className="mt-[-25px] flex h-[200px] basis-3/5 justify-center
+          className="mt-10 flex  h-[200px] basis-3/5 justify-center
               md:z-10 md:ml-40 md:mt-16 md:h-[400px] md:justify-items-end"
         >
           <SnowCanvas />

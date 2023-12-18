@@ -37,8 +37,6 @@ function SnowCanvas() {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableDamping={true}
-          enableRotate={false}
           enablePan={false}
           target-z={0.3}
           autoRotate
