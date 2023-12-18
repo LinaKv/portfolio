@@ -49,9 +49,8 @@ function Experience({ setSelectedPage }: Props) {
               </span>
             </p>
           </div>
-          <div className="">
-            <WorkPlaces />
-          </div>
+
+          <WorkPlaces />
         </motion.div>
       </motion.div>
       <div className="relative">
