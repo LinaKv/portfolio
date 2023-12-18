@@ -24,7 +24,7 @@ const Home = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
-        <div className="z-10 mt-20 md:basis-3/5">
+        <div className="z-10 mt-24 md:basis-3/5">
           {/* HEADINGS */}
           <div>
             <div className="relative">
@@ -51,7 +51,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           {/* actions */}
-          <div className="mt-4 flex items-center gap-8 md:mt-10">
+          <div className="mt-5 flex items-center gap-8 md:mt-10">
             <div className="w-[200px] md:w-[300px]">
               <TelegramBtn isAnimated={false} />
             </div>
