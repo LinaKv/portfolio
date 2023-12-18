@@ -24,7 +24,7 @@ const Home = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
-        <div className="z-10 mt-5 md:mt-24 md:basis-3/5">
+        <div className="z-10 mt-5 md:mt-20 md:basis-3/5">
           {/* HEADINGS */}
           <div>
             <div className="relative">
@@ -51,7 +51,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           {/* actions */}
-          <div className="mt-5 flex items-center gap-8 md:mt-10">
+          <div className="relative mt-5 flex items-center gap-8 md:mt-10">
             <div className="w-[200px] md:w-[300px]">
               <TelegramBtn isAnimated={false} />
             </div>
@@ -62,17 +62,17 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               <p>{language ? "Проекты" : "Portfolio"}</p>
             </AnchorLink>
+            <SignToScroll setSelectedPage={setSelectedPage} />
           </div>
         </div>
         {/* img */}
         <div
-          className="mt-10 flex  h-[200px] basis-3/5 justify-center
+          className="mt-5 flex  h-[200px] basis-3/5 justify-center
               md:z-10 md:ml-40 md:mt-16 md:h-[400px] md:justify-items-end"
         >
           <SnowCanvas />
         </div>
       </motion.div>
-      {/* <SignToScroll setSelectedPage={setSelectedPage} /> */}
     </section>
   );
 };
