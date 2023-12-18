@@ -66,7 +66,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
         {/* img */}
         <div
-          className="mt-[-25px] flex h-[300px] basis-3/5 justify-center
+          className="mt-[-25px] flex h-[200px] basis-3/5 justify-center
               md:z-10 md:ml-40 md:mt-16 md:h-[400px] md:justify-items-end"
         >
           <SnowCanvas />

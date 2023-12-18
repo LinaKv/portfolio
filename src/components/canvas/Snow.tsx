@@ -19,8 +19,8 @@ const Snow = ({ isMobile }: Props) => {
       <pointLight intensity={10} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.3 : 0.9}
-        position={[0, -1, 0]}
+        scale={isMobile ? 1.3 : 1}
+        position={isMobile ? [0, -1, 0] : [0, -1, 0]}
         rotation={[0, 0, 0]}
       />
     </mesh>
@@ -37,6 +37,8 @@ function SnowCanvas() {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          enableDamping={true}
+          enableRotate={false}
           enablePan={false}
           target-z={0.3}
           autoRotate
