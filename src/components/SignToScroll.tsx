@@ -10,7 +10,7 @@ type Props = {
 function SignToScroll({ setSelectedPage }: Props) {
   return (
     <AnchorLink
-      className="absolute bottom-8 flex w-full items-center justify-center xs:hidden"
+      className="absolute bottom-[-75px] flex w-full items-center justify-center xs:hidden"
       onClick={() => setSelectedPage("benefits" as SelectedPage)}
       href={`#benefits`}
     >
