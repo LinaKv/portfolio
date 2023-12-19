@@ -30,9 +30,9 @@ const Home = ({ setSelectedPage }: Props) => {
             <div className="relative">
               <div className="before:absolute before:-top-20  before:-left-20 before:z-[-1] md:before:content-evolvetext">
                 {/* <img alt="home-page-text" src={HomePageText} /> */}
-                <h1>
-                  <span className="text-5xl ">Hello!</span>
-                </h1>
+                {/* <h1>
+                  <span className="text-5xl">Hello!</span>
+                </h1> */}
                 <p className="text-2xl">
                   My name is{" "}
                   <span className="font-bold text-secondary-500">
@@ -44,7 +44,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 </p>
               </div>
             </div>
-            <p className="mt-10">
+            <p className="mt-5">
               {language
                 ? "В 13 лет мне было интересно добавлять снежинки в HTML, а сегодня мне интересна разработка сайтов на React"
                 : "The developer whose journey began with adding snowflakes to HTML at the age of 13"}
