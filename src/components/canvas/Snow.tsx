@@ -40,7 +40,6 @@ function SnowCanvas() {
           enablePan={false}
           target-z={0.3}
           autoRotate
-          autoRotateSpeed={0.9}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

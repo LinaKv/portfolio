@@ -29,10 +29,9 @@ const Home = ({ setSelectedPage }: Props) => {
           <div>
             <div className="relative">
               <div className="before:absolute before:-top-20  before:-left-20 before:z-[-1] md:before:content-evolvetext">
-                {/* <img alt="home-page-text" src={HomePageText} /> */}
-                <h1 className="text-5xl">Hello!</h1>
+                <h1 className="text-5xl">{language ? "Привет!" : "Hello!"}</h1>
                 <p className="mt-2 text-2xl">
-                  My name is{" "}
+                  {language ? "Меня зовут" : "My name is"}{" "}
                   <span className="font-bold text-secondary-500">
                     Polina Kvitka
                   </span>
