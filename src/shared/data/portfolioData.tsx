@@ -5,6 +5,7 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import image8 from "@/assets/image8.png";
+import image7 from "@/assets/image7.png";
 
 export const portfolio: Array<ClassType> = [
   {
@@ -48,5 +49,11 @@ export const portfolio: Array<ClassType> = [
     git: "https://github.com/LinaKv/gym-application-ts",
     description: "TypeScript, Tailwind, React, Framer-motion",
     image: image6,
+  },
+  {
+    name: "Airplane",
+    git: "https://github.com/LinaKv/Airplane",
+    description: "JavaScript, Three.JS, react-three/drei, react-three/fiber",
+    image: image7,
   },
 ];

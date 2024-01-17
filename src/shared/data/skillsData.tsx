@@ -10,7 +10,15 @@ export const skills: Array<SkillsType> = [
     type: "language",
   },
   {
+    title: "HTML",
+    type: "language",
+  },
+  {
     title: "React",
+    type: "framework",
+  },
+  {
+    title: "React Native",
     type: "framework",
   },
   {
@@ -83,11 +91,23 @@ export const skills: Array<SkillsType> = [
     type: "library",
   },
   {
+    title: "Three.js",
+    type: "library",
+  },
+  {
+    title: "Ant Design",
+    type: "library",
+  },
+  {
     title: "Postman",
     type: "testing",
   },
   {
     title: "Insomnia",
+    type: "testing",
+  },
+  {
+    title: "Jest",
     type: "testing",
   },
 ];
