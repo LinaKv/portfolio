@@ -21,7 +21,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
   const { language } = useMyContext();
 
-  const handleClick: EventListener = (event: any) => {
+  const handleClick = (event: any) => {
     if (navMobile.current && !navMobile.current.contains(event.target)) {
       setIsMenuToggled(!isMenuToggled);
     }

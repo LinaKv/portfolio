@@ -63,11 +63,14 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         {/* img */}
-        <div className="flex h-[600px] w-[600px] items-center justify-center">
+        <div
+          className="mt-12 mb-12 flex basis-3/5 justify-center md:z-10
+              md:ml-40 md:mt-16 md:justify-items-end "
+        >
           <img
-            className="max-h-[600px]"
             src={HomePageGraphic}
-            alt="contact us"
+            alt="home-pageGraphic"
+            className="max-h-[600px]"
           />
         </div>
       </motion.div>
