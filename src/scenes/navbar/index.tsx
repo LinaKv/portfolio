@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
@@ -17,8 +17,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const navMobile = useRef<HTMLDivElement>(null);
 
   const { language } = useMyContext();
+
+  const handleClick: EventListener = (event: any) => {
+    if (navMobile.current && !navMobile.current.contains(event.target)) {
+      setIsMenuToggled(!isMenuToggled);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
 
   return (
     <nav>
@@ -61,12 +75,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
-                  <Link
-                    name={language ? "Резюме" : "CV"}
-                    page="CV"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
 
                   <Switch />
                 </div>
@@ -90,7 +98,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
       {/* {Mobile menu} */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-500 drop-shadow-xl">
+        <div
+          ref={navMobile}
+          className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-500 drop-shadow-xl"
+        >
           {/*close icon  */}
           <div className="flex  justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -124,12 +135,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               <Link
                 name={language ? "Опыт работы" : "Experience"}
                 page="Experience"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                name={language ? "Резюме" : "CV"}
-                page="CV"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />

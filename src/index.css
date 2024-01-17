@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -81,4 +82,11 @@ body,
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.slogan {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #6d302e;
 }

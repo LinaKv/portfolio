@@ -22,7 +22,7 @@ function TiltElement({
   git,
   elementsNumber,
 }: Props) {
-  const isWeb = useMediaQuery("(max-width: 400px)");
+  const isWeb = useMediaQuery("(max-width: 500px)");
 
   return !isWeb ? (
     <Tilt
@@ -73,7 +73,7 @@ function TiltElement({
     </Tilt>
   ) : (
     <motion.div
-      className="mx-auto w-5/6"
+      className="mx-auto flex w-5/6 items-center justify-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
@@ -83,7 +83,7 @@ function TiltElement({
         visible: { opacity: 1, x: 0 },
       }}
     >
-      <div className="w-[250px] drop-shadow-lg">
+      <div className=" w-[250px]  drop-shadow-lg">
         <div className="relative flex min-h-[280px] w-full flex-col items-center justify-evenly rounded-[20px] bg-gray-50  py-5 px-3 text-gray-500 ">
           {/* Project */}
           <img

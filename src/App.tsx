@@ -40,7 +40,7 @@ function App() {
       <Benefits setSelectedPage={setSelectedPage} />
       <Portfolio setSelectedPage={setSelectedPage} />
       <Experience setSelectedPage={setSelectedPage} />
-      <CVBlock setSelectedPage={setSelectedPage} />
+      {/* <CVBlock setSelectedPage={setSelectedPage} /> */}
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>

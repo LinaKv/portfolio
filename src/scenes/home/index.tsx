@@ -4,9 +4,9 @@ import { SelectedPage } from "@/shared/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 import { useMyContext } from "@/context/MyContext";
-import { SnowCanvas } from "../../components/canvas";
 import SignToScroll from "../../components/SignToScroll";
 import TelegramBtn from "@/components/TelegramBtn";
+import HomePageGraphic from "@/assets/HomePageGraphic.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -17,10 +17,10 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="relative h-max w-full gap-16 bg-[#550C18] pt-10 pb-5 text-gray-50 md:pb-0 md:pt-20 lg:mx-auto lg:w-2/4"
+      className="w-full gap-16 bg-[#550C18] pt-16 pb-10 text-gray-50 md:flex md:h-[900px] md:items-center md:justify-center md:pb-0 lg:mx-auto lg:w-2/4"
     >
       <motion.div
-        className="mx-auto mb-5 flex w-5/6 flex-wrap-reverse items-center justify-center md:mb-0 md:h-[600px] md:flex-nowrap"
+        className="mx-auto mb-5 flex  w-5/6 flex-wrap-reverse items-center justify-around md:mb-0 md:flex-nowrap"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
@@ -33,7 +33,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 <p className="mt-2 text-2xl">
                   {language ? "Меня зовут" : "My name is"}{" "}
                   <span className="font-bold text-secondary-500">
-                    Polina Kvitka
+                    {language ? "Полина Квитка" : "Polina Kvitka"}
                   </span>
                 </p>
                 <p className="mt-2 text-5xl font-bold text-secondary-500">
@@ -48,7 +48,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           {/* actions */}
-          <div className="relative mt-5 flex items-center gap-8 md:mt-10">
+          <div className=" relative mt-5 flex items-center gap-8 md:mt-10">
             <div className="w-[200px] md:w-[300px]">
               <TelegramBtn isAnimated={false} />
             </div>
@@ -57,17 +57,18 @@ const Home = ({ setSelectedPage }: Props) => {
               onClick={() => setSelectedPage(SelectedPage.OurClasses)}
               href={`#${SelectedPage.OurClasses}`}
             >
-              <p>{language ? "Проекты" : "Portfolio"}</p>
+              <p>{language ? "Портфолио" : "Portfolio"}</p>
             </AnchorLink>
             <SignToScroll setSelectedPage={setSelectedPage} />
           </div>
         </div>
         {/* img */}
-        <div
-          className="mt-5 flex  h-[200px] basis-3/5 justify-center
-              md:z-10 md:ml-40 md:mt-16 md:h-[400px] md:justify-items-end"
-        >
-          <SnowCanvas />
+        <div className="flex h-[600px] w-[600px] items-center justify-center">
+          <img
+            className="max-h-[600px]"
+            src={HomePageGraphic}
+            alt="contact us"
+          />
         </div>
       </motion.div>
     </section>

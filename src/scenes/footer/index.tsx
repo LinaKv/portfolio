@@ -45,9 +45,9 @@ function footer() {
             </a>
           </p>
           <p>
-            <span>kvitka.p</span>
+            <span>polinakvitka409</span>
             <span className="before-at-sign" />
-            <span className="domain">yandex.ru</span>
+            <span className="domain">gmail.com</span>
           </p>
         </div>
       </div>

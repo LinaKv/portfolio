@@ -47,7 +47,7 @@ function Portfolio({ setSelectedPage }: Props) {
           </div>
         </motion.div>
 
-        <div className="mx-auto mt-10 flex w-5/6 flex-wrap justify-between gap-10">
+        <div className="mx-auto mt-10 flex w-5/6 flex-wrap justify-center gap-10">
           {portfolio.map((item, index) => (
             <TiltElement
               key={`${item.name}-${index}`}

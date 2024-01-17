@@ -10,18 +10,18 @@ type Props = {
 };
 
 const Snow = ({ isMobile }: Props) => {
-  const computer = useGLTF("./snow/scene.gltf");
+  const computer = useGLTF("./rubiks_cube/scene.gltf");
 
   return (
-    <mesh>
-      <directionalLight intensity={4} />
-      <hemisphereLight intensity={5} />
-      <pointLight intensity={10} />
+    <mesh castShadow>
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.3 : 1}
-        position={isMobile ? [0, -1, 0] : [0, -1, 0]}
-        rotation={[0, 0, 0]}
+        scale={isMobile ? 55 : 30}
+        // scale={55}
+        // position={isMobile ? [0, 0, 0] : [0, 0, 0]}
+        position={[0, 0, 0]}
+        rotation={[1, 0, 0]}
+        castShadow
       />
     </mesh>
   );
@@ -32,17 +32,19 @@ function SnowCanvas() {
 
   return (
     <Canvas
-      camera={{ position: [4, 0, 6], fov: 45 }}
+      camera={{ position: isMobile ? [12, 0, 0] : [6, 0, 0] }}
       gl={{ preserveDrawingBuffer: true }}
+      shadows
     >
       <Suspense fallback={<CanvasLoader />}>
+        <directionalLight position={[2, 3, -0.16]} intensity={5} />
+        <hemisphereLight intensity={5} />
+        <pointLight intensity={10} castShadow />
         <OrbitControls
           enablePan={false}
-          target-z={0.3}
+          target-z={0.01}
           autoRotate
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
         />
         <Snow isMobile={isMobile} />
       </Suspense>
