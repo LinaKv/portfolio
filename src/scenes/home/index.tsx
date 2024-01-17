@@ -64,7 +64,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
         {/* img */}
         <div
-          className="mt-12 mb-12 flex basis-3/5 justify-center md:z-10
+          className="mt-12 mb-12 flex basis-2/5 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end "
         >
           <img
