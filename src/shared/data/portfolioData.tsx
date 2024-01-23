@@ -6,6 +6,7 @@ import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import image8 from "@/assets/image8.png";
 import image7 from "@/assets/image7.png";
+import image9 from "@/assets/image9.png";
 
 export const portfolio: Array<ClassType> = [
   {
@@ -55,5 +56,12 @@ export const portfolio: Array<ClassType> = [
     git: "https://github.com/LinaKv/Airplane",
     description: "JavaScript, Three.JS, react-three/drei, react-three/fiber",
     image: image7,
+  },
+  {
+    name: "TimeTravels",
+    git: "https://github.com/LinaKv/timeTravels",
+    description:
+      "TypeScript, Sass, React, Swiper, react-transition-group, gsap",
+    image: image9,
   },
 ];
