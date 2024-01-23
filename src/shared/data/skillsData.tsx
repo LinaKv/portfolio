@@ -99,6 +99,10 @@ export const skills: Array<SkillsType> = [
     type: "library",
   },
   {
+    title: "GSAP",
+    type: "library",
+  },
+  {
     title: "Postman",
     type: "testing",
   },
